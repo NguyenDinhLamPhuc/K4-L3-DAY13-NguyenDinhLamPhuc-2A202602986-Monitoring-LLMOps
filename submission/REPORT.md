@@ -4,12 +4,12 @@
 
 ## 1. Thông tin học viên
 
-- **Họ và tên:**Nguyễn Đình Lâm Phúc
-- **MSSV:**2A202602986
+- **Họ và tên:** Nguyễn Đình Lâm Phúc
+- **MSSV:** 2A202602986
 - **Lớp:** K4-L3B
-- **Repository URL:**https://github.com/NguyenDinhLamPhuc/K4-L3-DAY13-NguyenDinhLamPhuc-2A202602986-Monitoring-LLMOps
-- **Commit SHA cuối:**61a34f827748393ced851ea7c9b412dd53dced23
-- **Challenge ID:**day13-k4-l3b-monitoring-llmops-v1
+- **Repository URL:** https://github.com/NguyenDinhLamPhuc/K4-L3-DAY13-NguyenDinhLamPhuc-2A202602986-Monitoring-LLMOps
+- **Commit SHA cuối:** 1daac5ccddadba7457c54d98384e47f8bd41d173
+- **Challenge ID:** day13-k4-l3b-monitoring-llmops-v1
 - **Tên project Langfuse cá nhân:** `day13-k4-l3b-2A202602986`
 
 ## 2. Evidence index
