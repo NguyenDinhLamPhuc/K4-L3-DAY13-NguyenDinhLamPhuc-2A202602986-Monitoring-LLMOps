@@ -1,25 +1,35 @@
 alerts:
-  - name: TODO_alert_1
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: HighLatencyP95
+    severity: warning
+    condition: 'p95(response_sent.latency_ms, window=5m) > 3000'
+    evaluation_window: 5m
+    duration: 5m
     type: symptom-based
     channel: slack
-    owner: TODO
+    slack_channel: '#k4-l3b-alerts'
+    owner: student-2A202602986
     runbook: docs/alerts.md#alert-1
-  - name: TODO_alert_2
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: HighErrorRate
+    severity: critical
+    condition: 'count(request_failed, window=5m) / count(request_received, window=5m) * 100 > 2'
+    evaluation_window: 5m
+    duration: 5m
     type: symptom-based
     channel: slack
-    owner: TODO
+    slack_channel: '#k4-l3b-alerts'
+    owner: student-2A202602986
     runbook: docs/alerts.md#alert-2
-  - name: TODO_alert_3
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: LowRetrievalSuccess
+    severity: warning
+    condition: 'count(tool_name=retrieval and tool_success=true, window=5m) / count(tool_name=retrieval and tool_success!=null, window=5m) * 100 < 90'
+    evaluation_window: 5m
+    duration: 5m
     type: symptom-based
     channel: slack
-    owner: TODO
+    slack_channel: '#k4-l3b-alerts'
+    owner: student-2A202602986
     runbook: docs/alerts.md#alert-3
+
+# Declarative lab rules, not an executable alert/Slack delivery engine.
+# Evaluate every 30s; empty denominators/latency samples mean no data.
+# duration requires the condition to remain true for the entire duration.
